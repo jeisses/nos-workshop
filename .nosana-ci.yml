@@ -13,7 +13,7 @@ jobs:
 
   - name: build
     commands:
-      - npm install --save-dev hardhat
+      - npm ci
       - npx hardhat build
     artifacts:
       - name: my-build
