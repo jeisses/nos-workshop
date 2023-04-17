@@ -13,19 +13,18 @@ jobs:
 
   - name: build
     commands:
-      - echo "building..."
+      - npx hardhat compile
     artifacts:
-      - name: my-build
-        path: .
+      - name: artifacts
 
   - name: test
     commands:
-      - echo "testing..."
+      - ls -R artifacts
     resources:
-      - name: my-build
+      - name: artifacts
 
   - name: deploy
     commands:
       - echo "deploying..."
     resources:
-      - name: my-build
+      - name: artifacts
