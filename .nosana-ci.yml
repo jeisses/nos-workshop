@@ -13,7 +13,7 @@ jobs:
 
   - name: build
     commands:
-      - npm install -g hardhat
+      - npm install --save-dev hardhat
       - npx hardhat build
     artifacts:
       - name: my-build
@@ -21,7 +21,7 @@ jobs:
 
   - name: test
     commands:
-      - echo "testing..."
+      - npx hardhat test
     resources:
       - name: my-build
 
