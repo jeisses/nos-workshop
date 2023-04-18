@@ -14,7 +14,7 @@ jobs:
   - name: build
     commands:
       - npm install
-      - npx hardhat build
+      - npx hardhat compile
     artifacts:
       - name: my-build
         path: .
