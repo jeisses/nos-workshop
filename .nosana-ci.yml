@@ -17,7 +17,7 @@ jobs:
       - npx hardhat compile
     artifacts:
       - name: my-build
-        path: .
+        path: xyz
 
   - name: test
     commands:
